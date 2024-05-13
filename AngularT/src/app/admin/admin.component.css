@@ -1,0 +1,55 @@
+/* Couleur de fond de la barre de navigation */
+.navbar {
+    background-color: #f8f9fa;
+  }
+  
+  /* Couleur du texte dans la barre de navigation */
+  .navbar-light .navbar-nav .nav-link {
+    color: #007bff;
+  }
+  
+  /* Couleur du texte au survol */
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #0056b3;
+  }
+  
+  /* Couleur du texte des liens actifs */
+  .navbar-light .navbar-nav .active > .nav-link {
+    color: #0056b3;
+  }
+  
+  /* Couleur du texte du lien dropdown */
+  .navbar-light .navbar-nav .dropdown-menu .dropdown-item {
+    color: #007bff;
+  }
+  
+  /* Couleur du texte du lien dropdown au survol */
+  .navbar-light .navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #0056b3;
+  }
+  
+  /* Couleur du fond du lien dropdown au survol */
+  .navbar-light .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+.container {
+    display: flex; /* Utilise Flexbox */
+    justify-content: space-between; /* Répartit l'espace disponible entre les éléments */
+  }
+  
+  .img-box {
+    flex: 1; /* Chaque boîte d'image prendra une part égale de l'espace disponible */
+    margin-right: 20px; /* Espace entre chaque boîte d'image */
+  }
+  
+  .img-box:last-child {
+    margin-right: 0; /* Supprime la marge à droite du dernier élément pour éviter un espace vide */
+  }
+  
+  .img-box img {
+    max-width: 100%; /* Assure que les images ne dépassent pas leur conteneur */
+    height: auto; /* Garde le ratio hauteur/largeur de l'image */
+    display: block; /* Supprime l'espace en dessous de l'image */
+  }
+  

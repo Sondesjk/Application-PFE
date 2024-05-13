@@ -1,0 +1,77 @@
+/* Style pour les boîtes d'image */
+.img-box {
+    float: left; /* Flotte à gauche */
+    width: 50%; /* Prend 50% de la largeur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+    padding-right: 10px; /* Espacement à droite */
+  }
+  
+  .img-box img {
+    width: 100%; /* Prend 100% de la largeur de la boîte */
+    height: auto; /* Garde le ratio hauteur/largeur de l'image */
+    display: block; /* Supprime l'espace en dessous de l'image */
+  }
+  
+  /* Style pour le formulaire */
+  form {
+    float: right; /* Flotte à droite */
+    width: 50%; /* Prend 50% de la largeur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+    padding-left: 10px; /* Espacement à gauche */
+  }
+  
+  label {
+    display: block; /* Place chaque label sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espace en dessous de chaque label */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"] {
+    width: 40%; /* Les champs de texte s'étendent sur toute la largeur */
+    padding: 8px; /* Espacement interne */
+    margin-bottom: 10px; /* Espace en dessous de chaque champ de texte */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+  }
+  
+  input[type="submit"] {
+    width: auto; /* Ajuste la largeur du bouton à son contenu */
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de type pointer au survol */
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+  }
+  
+    /* Style pour le tableau */
+  table {
+    width: 100%; /* Le tableau occupe toute la largeur disponible */
+    border-collapse: collapse; /* Fusionne les bordures des cellules */
+  }
+  
+  /* Style pour les cellules de l'en-tête */
+  th {
+    background-color: #f2f2f2; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    padding: 8px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure */
+  }
+  
+  /* Style pour les cellules de données */
+  td {
+    padding: 8px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure */
+  }
+  
+  /* Style pour les lignes impaires */
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Couleur de fond */
+  }

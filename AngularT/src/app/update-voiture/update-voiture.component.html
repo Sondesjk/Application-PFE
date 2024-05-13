@@ -1,0 +1,48 @@
+<h2>Update </h2>
+
+<form method="POST">
+    <div class="form-group">
+        <label for="marque">Marque :</label>
+        <input type="text" placeholder="Marque" name="marque" [(ngModel)]="voiture.marque">
+    </div>
+    <div class="form-group">
+        <label for="annee">Année :</label>
+        <input type="text" placeholder="Année" name="annee" [(ngModel)]="voiture.annee">
+    </div>
+    <div class="form-group">
+        <label for="prix">Prix :</label>
+        <input type="text" placeholder="Prix" name="prix" [(ngModel)]="voiture.prix">
+    </div>
+    <div class="form-group">
+        <label for="matricule">Matricule :</label>
+        <input type="text" placeholder="Matricule" name="matricule" [(ngModel)]="voiture.matricule">
+    </div>
+    <div class="form-group">
+        <label for="numDeChoussi">Numéro de Châssis :</label>
+        <input type="text" placeholder="Numéro de Châssis" name="numDeChoussi" [(ngModel)]="voiture.numDeChoussi">
+    </div>
+    
+    <button (click)="confirmupdate()" class="btn btn-primary">Update</button>
+</form>
+
+<li><a href="home">Home</a></li>
+
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">update Confirmation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to update this Voiture?</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" (click)=" closeUpdate()">No</button>
+            <button type="button" class="btn btn-danger" (click)="updateVoiture()">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>

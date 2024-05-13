@@ -1,0 +1,36 @@
+<div class="center">
+    <h2>Ajouter</h2>
+</div>
+<form method="POST">
+    <div class="form-group"><br>
+        <label for="firstname">Firstname :</label>
+        <input type="text" placeholder="firstname" [(ngModel)]="user.firstname" name="firstname">
+    </div>
+    <div class="form-group"><br>
+        <label for="lastname">Lastname :</label>
+        <input type="text" placeholder="lastname" [(ngModel)]="user.lastname" name="lastname">
+    </div>
+    <div class="form-group"><br>
+        <label for="Email">Email :</label>
+        <input type="email" placeholder="email" [(ngModel)]="user.email" name="email">
+    </div>
+    <div class="form-group"><br>
+        <label for="username">Username :</label>
+        <input type="text" placeholder="username" [(ngModel)]="user.username" name="username">
+    </div>
+    <div class="form-group"><br>
+        <label for="Password">Password :</label>
+        <input type="password" placeholder="password" [(ngModel)]="user.password" name="password">
+    </div>
+    <div class="form-group"><br>
+        <label for="PasswordConfirmation">Password Confirmation :</label>
+        <input type="password" placeholder="passwordConfirmation" [(ngModel)]="user.confpassword" name="passwordConfirmation">
+    </div>
+    <div class="form-group"><br>
+        <label for="address">Address :</label>
+        <input type="text" placeholder="address" [(ngModel)]="user.address" name="address">
+    </div>
+    <button (click)="addUser()" type="submit">Add</button>
+    <li><a href="home">Home</a></li>
+    <div class="signup-link"><br></div>
+</form>

@@ -1,0 +1,28 @@
+<h2>Ajouter voiture</h2><br><br>
+<form method="POST">
+    <div class="form-group"><br>
+        <label for="marque">marque :</label>
+        <input type="text" placeholder="marque" name="marque" [(ngModel)]="voiture.marque">
+    </div>
+    <div class="form-group"><br>
+        <label for="annee">annee :</label>
+        <input type="text" placeholder="annee" name="annee" [(ngModel)]="voiture.annee">
+    </div>
+    <div class="form-group"><br>
+        <label for="prix">prix :</label>
+        <input type="text" placeholder="prix" name="prix" [(ngModel)]="voiture.prix">
+    </div>
+    <div class="form-group"><br>
+        <label for="matricule">matricule :</label>
+        <input type="text" placeholder="matricule" name="matricule" [(ngModel)]="voiture.matricule">
+    </div>
+    <div class="form-group"><br>
+        <label for="numDeChoussi">numDeChoussi :</label>
+        <input type="text" placeholder="numDeChoussi" name="numDeChoussi" [(ngModel)]="voiture.numDeChoussi">
+    </div>
+    
+    <button (click)="addVoiture()" class="btn btn-primary">Ajouter</button>
+
+    <li><a href="home">Home</a></li>
+ 
+</form>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de code QR de voiture</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest"></script>
+</head>
+<body>
+    <div class="center">
+        <h2>Générateur de code QR de voiture</h2>
+    </div>
+
+    <form id="carForm">
+        <label for="marque">Marque :</label>
+        <input type="text" id="marque" name="marque" required><br><br>
+
+        <label for="model">Modèle :</label>
+        <input type="text" id="model" name="model" required><br><br>
+
+        <label for="annee">Année :</label>
+        <input type="text" id="annee" name="annee" required><br><br>
+        
+        <label for="prix">Prix :</label>
+        <input type="text" id="prix" name="prix" required><br><br>
+
+        <label for="matricule">Matricule :</label>
+        <input type="text" id="matricule" name="matricule" required><br><br>
+        
+        <label for="numDeChoussi">Numéro de Châssis :</label>
+        <input type="text" id="numDeChoussi" name="numDeChoussi" required><br><br>
+
+        <button type="button" onclick="generateQRCode()">Générer QR Code</button>
+    </form>
+
+    <!-- Afficher le QR code généré -->
+    <div id="qrcode"></div>
+
+    <!-- Informations de la voiture -->
+    <div id="car-info">
+        <!-- Les informations de la voiture seront affichées ici -->
+    </div>
+
+    <!-- Script pour générer le QR code -->
+    <script>
+        function generateQRCode() {
+            var marque = document.getElementById('marque').value;
+            var model = document.getElementById('model').value;
+            var annee = document.getElementById('annee').value;
+            var prix = document.getElementById('prix').value;
+            var matricule = document.getElementById('matricule').value;
+            var numDeChoussi = document.getElementById('numDeChoussi').value;
+            
+            // Concaténer les informations de la voiture pour former une chaîne
+            var carInfo = {
+                marque: marque,
+                model: model,
+                annee: annee,
+                prix: prix,
+                matricule: matricule,
+                numDeChoussi: numDeChoussi
+            };
+
+            // Générer le QR code
+            var qrCode = new QRCode(document.getElementById("qrcode"), {
+                text: JSON.stringify(carInfo),
+                width: 200,
+                height: 200
+            });
+
+            // Afficher les informations de la voiture
+            afficherInfosVoiture(carInfo);
+        }
+
+        // Fonction pour afficher les informations de la voiture
+        function afficherInfosVoiture(carInfo) {
+            var carInfoDiv = document.getElementById('car-info');
+            carInfoDiv.innerHTML = '';
+
+            var ul = document.createElement('ul');
+            for (var key in carInfo) {
+                var li = document.createElement('li');
+                li.innerHTML = '<strong>' + key + ':</strong> ' + carInfo[key];
+                ul.appendChild(li);
+            }
+            carInfoDiv.appendChild(ul);
+        }
+        
+    </script>
+</body>
+</html>

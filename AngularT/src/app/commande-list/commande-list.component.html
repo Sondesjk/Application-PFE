@@ -1,0 +1,52 @@
+<div>
+    <h2>Liste des commandes</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nom</th> 
+                <th>prenom</th>
+                <th>email</th>
+                <th>cin</th> 
+                <th>telephone</th>
+                <th>action</th> 
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let commande of commandes">
+                <td>{{commande.id}}</td>
+                <td>{{commande.nom}}</td>
+                <td>{{commande.prenom}}</td>
+                <td>{{commande.email}}</td>
+                <td>{{commande.cin}}</td>
+                <td>{{commande.telephone}}</td>
+                <td><button class="btn btn-danger">delete</button></td>
+                <td><button class="btn btn-primary">Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLabel">Delete Confirmation</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete this commande?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" >No</button>
+                <button type="button" class="btn btn-danger">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

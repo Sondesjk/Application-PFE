@@ -1,0 +1,93 @@
+/* Stylesheet */
+
+/* Réinitialisation des marges et des paddings */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style de base pour la page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh; /* Ajuster la hauteur selon vos besoins */
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Ajuster la largeur selon vos besoins */
+  width: 100%;
+}
+
+.login-box h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: calc(100% - 40px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+.login-box a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.login-box button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+.content {
+  text-align: center;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #007bff;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.socials a:hover {
+  background-color: #e0e0e0;
+}
